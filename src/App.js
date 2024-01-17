@@ -6,7 +6,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Article from './Article';
 
 function App() {
-  // const githubLink = 'https://api.github.com/repos/CodingLife1024/blog-content/contents/2024-01-14::02:16.md';
+  const githubLink = 'https://api.github.com/repos/CodingLife1024/blog-content/contents/2024-01-14::02:16.md';
 
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
         {/* <PageLoader githubLink={githubLink}/> */}
         <Link to="/Article">Go to Article</Link>
         <Routes>
-          <Route path="/Article" element={<Article />} />
+          <Route path="/Articl" element={<Article githubLink={githubLink} />} />
         </Routes>
       </header>
     </div>
