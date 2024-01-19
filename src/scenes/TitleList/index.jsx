@@ -49,21 +49,10 @@ const TitleList = () => {
       )}
 
 
-      
-      <Routes>
-        {files.map((file) => (
-          <Route
-            key={file.name}
-            path={`/${file.name}`}
-            element={
-              <div>
-                <Link to={`/${file.name}`}>yy</Link>
-                <PageLoader githubLink={`${GitHubAPI}${file.name}`} />
-              </div>
-            }
-          />
-        ))}
-      </Routes>
+
+      {files.map((file) => (
+        <h1>evugr</h1>
+      ))}
     </div>
   );
 };
