@@ -3,7 +3,12 @@ import styles from './sidebar.module.css'
 
 const SideBar = () => {
   return (
-    <div>SideBar</div>
+    <div className={styles.sidebar}>
+      <div className={styles.texts}>My Website</div>
+      <div className={styles.texts}>Books</div>
+      <div className={styles.texts}>Movies</div>
+      <div className={styles.texts}>About</div>
+    </div>
   )
 }
 
