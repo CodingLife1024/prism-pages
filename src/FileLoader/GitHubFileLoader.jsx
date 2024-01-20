@@ -1,10 +1,12 @@
 // src/GitHubFileLoader.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import styles from './githubFileLoader.module.css';
 
 const GitHubFileLoader = ({ githubLink }) => {
+  console.log('GitHubFileLoader rendered with githubLink:', githubLink);
   const [fileContent, setFileContent] = useState(() => {
     // Try to load content from localStorage on component mount
     const storedContent = localStorage.getItem('githubFileContent');
