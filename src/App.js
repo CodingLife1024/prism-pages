@@ -13,9 +13,11 @@ function App() {
     <>
       {/* <PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/README.md" /> */}
       <TopBar />
-      <SideBar />
-      <Dashboard />
-      <Category />
+      <div>
+        <SideBar />
+        <Dashboard />
+        <Category />
+      </div>
     </>
   );
 }

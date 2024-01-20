@@ -1,0 +1,22 @@
+.topbar {
+    padding: 10px 50px 10px 50px;
+    background-color: #031716;
+    height: fit-content;
+    color: #DBF8FA;
+}
+
+.name, .intro, .interests {
+    font-size: 50px;
+}
+
+.intro, .interests {
+    font-size: 20px;
+}
+
+.socials {
+    display: flex; /* Use flexbox to align the icons horizontally */
+}
+
+.social > * {
+    margin-right: 10px; /* Adjust the margin as needed for the desired gap between icons */
+}
