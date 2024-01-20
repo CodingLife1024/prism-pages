@@ -1,6 +1,8 @@
 .sidebar {
     padding: 20px 10px 20px 10px;
     background-color: #7CE6EE;
+    width: 10%;
+    min-width: fit-content;
     height: 100%;
 }
 

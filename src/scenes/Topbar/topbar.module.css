@@ -1,8 +1,10 @@
 .topbar {
     padding: 10px 50px 10px 50px;
     background-color: #031716;
-    height: fit-content;
+    height: 200px;
     color: #DBF8FA;
+    width: 100%;
+    /* position: fixed; */
 }
 
 .name, .intro, .interests {

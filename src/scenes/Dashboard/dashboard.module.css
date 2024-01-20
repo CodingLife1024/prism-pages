@@ -1,0 +1,12 @@
+.dashboard {
+    background-color: #E8A64A;
+    width: 80%;
+    min-width: fit-content;
+    padding: 20px 10px 20px 10px;
+    overflow-y: auto;
+}
+
+.topics {
+    font-size: 25px;
+    padding: 5px 0 5px 0;
+}
