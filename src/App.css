@@ -10,9 +10,5 @@ body, html {
 
 .main-container {
   display: flex; /* Use flexbox to arrange child components horizontally */
-  height: 100%;
-}
-
-.full {
-  max-height: 100vh;
+  height: 400px;
 }

@@ -1,7 +1,7 @@
 .topbar {
     padding: 10px 50px 10px 50px;
     background-color: #031716;
-    height: 200px;
+    height: fit-content;
     color: #DBF8FA;
     width: 100%;
     /* position: fixed; */
@@ -9,6 +9,7 @@
 
 .name, .intro, .interests {
     font-size: 50px;
+    width: 80%;
 }
 
 .intro, .interests {
