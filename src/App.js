@@ -6,6 +6,7 @@ import PageLoader from './PageLoader/PageLoader';
 import TopBar from './scenes/Topbar';
 import SideBar from './scenes/Sidebar';
 import Dashboard from './scenes/Dashboard';
+import Category from './scenes/Categories';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <TopBar />
       <SideBar />
       <Dashboard />
+      <Category />
     </>
   );
 }
