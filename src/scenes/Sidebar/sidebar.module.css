@@ -4,6 +4,7 @@
     width: 10%;
     min-width: fit-content;
     height: 100%;
+    flex: 1;
 }
 
 .texts {
