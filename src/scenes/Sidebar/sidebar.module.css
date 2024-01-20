@@ -1,13 +1,13 @@
 .sidebar {
     padding: 20px 10px 20px 10px;
-    background-color: #7CE6EE;
+    background-color: #1b4042;
     width: 10%;
     min-width: fit-content;
     flex: 1;
 }
 
 .texts {
-    color: #031716;
+    color: #DBF8FA;
     font-size: 20px;
-    padding: 5px 0 5px 0;
+    padding: 10px 0 10px 0;
 }

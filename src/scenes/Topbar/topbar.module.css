@@ -23,3 +23,8 @@
 .social > * {
     margin-right: 10px; /* Adjust the margin as needed for the desired gap between icons */
 }
+
+.interests a {
+    color: inherit; /* Inherit the color from the parent element (regular text color) */
+    text-decoration: underline; /* Add underline to the hyperlinked text */
+}

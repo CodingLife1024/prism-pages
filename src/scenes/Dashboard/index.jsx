@@ -13,24 +13,6 @@ const Dashboard = () => {
       </Routes> */}
       <div className={styles.topics}>Ode to Frankenstein</div>
       <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
     </div>
   )
 }
