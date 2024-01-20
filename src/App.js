@@ -13,11 +13,13 @@ function App() {
   return (
     <>
       {/* <PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/README.md" /> */}
-      <TopBar />
-      <div className="main-container">
-        <Category />
-        <Dashboard />
-        <SideBar />
+      <div className='full'>
+        <TopBar />
+        <div className="main-container">
+          <Category />
+          <Dashboard />
+          <SideBar />
+        </div>
       </div>
     </>
   );
