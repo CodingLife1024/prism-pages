@@ -10,5 +10,6 @@ body, html {
 
 .main-container {
   display: flex; /* Use flexbox to arrange child components horizontally */
-  height: 400px;
+  height: 70vh;
+  overflow-y: hidden;
 }
