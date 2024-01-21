@@ -15,7 +15,7 @@ const TopBar = () => {
         <FaTwitter style={style} />
       </div>
       <div className={styles.intro}>
-        <p>Hi, I am Riddhi, a pre-final year Computer Science undergraduate student at IIT Delhi.My interests are AI and ML algorithms, Web and App Development and Game Theory.</p>
+        <p>Hi, I am Riddhi, a pre-final year Computer Science undergraduate student at IIT Delhi. My interests are AI and ML algorithms, Web and App Development and Game Theory.</p>
       </div>
       <div className={styles.interests}>
         I am a part of <a href="https://facciitd.netlify.app/" target="_blank">Azure</a> (IITD Art Club) and <a href="https://indradhanuiitd.in/" target="_blank">Indradhanu</a> (Queer Collective).

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import PageLoader from '../../PageLoader/PageLoader'
 import TitleList from '../TitleList'
@@ -12,7 +13,7 @@ const Dashboard = () => {
         <Route path="/ttt" element={<PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/README.md" />} />
       </Routes> */}
       <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
+      <div className={styles.topics}>Ode to Frankenstein</div> 
     </div>
   )
 }
