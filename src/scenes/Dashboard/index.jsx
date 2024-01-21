@@ -1,17 +1,64 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Route, Routes } from 'react-router-dom'
-import PageLoader from '../../PageLoader/PageLoader'
-import TitleList from '../TitleList'
-import styles from './dashboard.module.css'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import PageLoader from '../../PageLoader/PageLoader';
+import styles from './dashboard.module.css';
+
+const GitHubAPI = "https://api.github.com/repos/CodingLife1024/blog-content/contents/";
 
 const Dashboard = () => {
+  const [files, setFiles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFiles = async () => {
+      try {
+        const response = await fetch(GitHubAPI);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch files: ${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        // Sort files based on last update
+        const sortedFiles = data.sort((a, b) => {
+          const dateA = new Date(a.last_modified);
+          const dateB = new Date(b.last_modified);
+          return dateB - dateA;
+        });
+
+        setFiles(sortedFiles);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching files:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchFiles();
+  }, []);
+
   return (
     <div className={styles.dashboard}>
-      <div className={styles.topics}>Ode to Frankenstein</div>
-      <div className={styles.topics}>Ode to Frankenstein</div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <Routes>
+          {files.map((file) => (
+            <Route
+              key={file.name}
+              path={`/${file.name}`}
+              element={
+                <div>
+                  <Link to={`/${file.name}`}>{file.name}</Link>
+                  <PageLoader githubLink={`${GitHubAPI}${file.name}`} />
+                </div>
+              }
+            />
+          ))}
+        </Routes>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
