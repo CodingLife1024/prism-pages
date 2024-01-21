@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import PageLoader from '../../PageLoader/PageLoader';
 import styles from './dashboard.module.css';
 
@@ -47,14 +46,21 @@ const Dashboard = () => {
             <Route
               key={file.name}
               path={`/${file.name}`}
-              element={
-                <div>
-                  <Link to={`/${file.name}`}>{file.name}</Link>
-                  <PageLoader githubLink={`${GitHubAPI}${file.name}`} />
-                </div>
-              }
+              element={<PageLoader githubLink={`${GitHubAPI}${file.name}`} />}
             />
           ))}
+          <Route
+            path="/"
+            element={
+              <ul>
+                {files.map((file) => (
+                  <li key={file.name}>
+                    <Link to={`/${file.name}`}>{file.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            }
+          />
         </Routes>
       )}
     </div>
