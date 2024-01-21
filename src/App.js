@@ -13,25 +13,14 @@ function App() {
   return (
     <>
       {/* <PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/README.md" /> */}
-      <Routes>
-        <Route
-          path="/pageloader/:filename"
-          element={<PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/README.md" />}
-        />
-        <Route
-          path="/"
-          element={
-            <div className='full'>
-              <TopBar />
-              <div className="main-container">
-                <Category />
-                <Dashboard />
-                <SideBar />
-              </div>
-            </div>
-          }
-        />
-      </Routes>
+      <div className='full'>
+        <TopBar />
+        <div className="main-container">
+          <Category />
+          <Dashboard />
+          <SideBar />
+        </div>
+      </div>
     </>
   );
 }
