@@ -17,7 +17,7 @@
 
 .topics a {
     color: white; /* Set the color for hyperlinks */
-    text-decoration: none; /* Optional: Remove underline for hyperlinks */
+    text-decoration: underline; /* Optional: Remove underline for hyperlinks */
 }
 
 /* Additional styles for visited and hover states */
