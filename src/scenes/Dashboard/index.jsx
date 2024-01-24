@@ -52,13 +52,13 @@ const Dashboard = () => {
           <Route
             path="/"
             element={
-              <ul>
+              <div className="">
                 {files.map((file) => (
-                  <li key={file.name}>
+                  <div key={file.name} className={styles.topics}>
                     <Link to={`/${file.name}`}>{file.name}</Link>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             }
           />
         </Routes>

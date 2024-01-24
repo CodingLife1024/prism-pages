@@ -3,7 +3,7 @@
     /* background-image: url("../../../public/book.jpg"); */
     width: 80%;
     min-width: fit-content;
-    padding: 20px 10px 20px 10px;
+    padding: 20px 20px 20px 20px;
     overflow-y: auto;
     flex: 5;
 }
@@ -11,5 +11,20 @@
 .topics {
     font-size: 25px;
     padding: 5px 0 5px 0;
-    color: #DBF8FA;
+    color: white; /* Set the default color to white */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.topics a {
+    color: white; /* Set the color for hyperlinks */
+    text-decoration: none; /* Optional: Remove underline for hyperlinks */
+}
+
+/* Additional styles for visited and hover states */
+.topics a:visited {
+    color: white;
+}
+
+.topics a:hover {
+    color: aqua; /* Set the color for hover state */
 }
