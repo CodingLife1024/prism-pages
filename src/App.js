@@ -6,6 +6,7 @@ import TopBar from './scenes/Topbar';
 import SideBar from './scenes/Sidebar';
 import Dashboard from './scenes/Dashboard';
 import Category from './scenes/Categories';
+import About from './scenes/About';
 import "./App.css"
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           </>
         } />
 
-        <Route path="/about" element={<PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/pride-a-history.md" />} />
+        <Route path="/about" element={<About/>} />
       </Routes>
 
     </>
