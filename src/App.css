@@ -5,11 +5,11 @@ body, html {
   font-family: 'Arial', sans-serif;
   height: 100vh;
   background-color: #031716;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .main-container {
   display: flex; /* Use flexbox to arrange child components horizontally */
   height: 70vh;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
