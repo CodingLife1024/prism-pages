@@ -11,8 +11,8 @@
 .topics {
     font-size: 25px;
     padding: 5px 0 5px 0;
-    color: white; /* Set the default color to white */
-    text-decoration: none; /* Optional: Remove underline */
+    color: white;
+    text-decoration: underline;
 }
 
 .topics a {
