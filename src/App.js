@@ -29,6 +29,8 @@ function App() {
         } />
 
         <Route path="/about" element={<About/>} />
+
+        <Route path="/pride-a-history.md" element={<PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/pride-a-history.md" />} />
       </Routes>
 
     </>
