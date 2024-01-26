@@ -7,6 +7,7 @@ import SideBar from './scenes/Sidebar';
 import Dashboard from './scenes/Dashboard';
 import Category from './scenes/Categories';
 import About from './scenes/About';
+import { postData } from './data/postData';
 import "./App.css"
 
 function App() {
@@ -31,6 +32,14 @@ function App() {
         <Route path="/about" element={<About/>} />
 
         <Route path="/pride-a-history.md" element={<PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/pride-a-history.md" />} />
+
+        {postData.map((post) => (
+          <Route
+            key={post.id}
+            path={`/${post.link}`}
+            element={<PageLoader githubLink={`https://api.github.com/repos/CodingLife1024/blog-content/contents/${post.file}`} />}
+          />
+        ))}
       </Routes>
 
     </>
