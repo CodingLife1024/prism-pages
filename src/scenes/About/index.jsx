@@ -22,7 +22,7 @@ const About = () => {
         Contact me
       </div>
       <div className={styles.para}>
-
+        <p>Have an idea, suggestion, project or just wanna talk? Hit me up here and I will chat back!</p>
       </div>
     </div>
   );
