@@ -1,13 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #031716;
+}
+
 .main {
     padding: 5%;
+    max-width: 1000px;
+}
+
+.about {
+    color: #DBF8FA;
+    font-size: 35px;
+    padding: 1% 2% 1% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    font-weight: 700;
 }
 
 .aboutme {
-    color: white;
+    color: #DBF8FA;
     font-size: 35px;
+    padding: 1% 2% 1% 0%;
+    font-weight: 700;
 }
 
 .para {
-    color: white;
+    color: #DBF8FA;
     font-size: 20px;
+    padding: 1% 4% 1% 4%;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+    .para {
+        color: #DBF8FA;
+        font-size: 20px;
+        padding: 1% 0% 1% 0%;
+        font-weight: 300;
+    }
 }
