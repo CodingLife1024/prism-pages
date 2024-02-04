@@ -13,3 +13,11 @@ body, html {
   height: 70vh;
   overflow-x: hidden;
 }
+
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+}

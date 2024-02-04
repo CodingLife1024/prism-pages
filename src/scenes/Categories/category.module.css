@@ -41,3 +41,37 @@
 .films {
     background-color: #C8F7C5;
 }
+
+@media only screen and (max-width: 1000px) {
+    .category {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        gap: 20px;
+        padding: 10px 30px 10px 30px;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .technology, .books, .experiences, .films, .lgbt {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .category {
+        padding: 20px 10px 20px 10px;
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+        flex: 1;
+    }
+
+    .technology, .books, .experiences, .films, .lgbt {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './topbar.module.css'
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const TopBar = () => {
   const style = { color: "#DBF8FA", fontSize: "30px"}
@@ -8,12 +8,16 @@ const TopBar = () => {
     <div className={styles.topbar}>
       <div className={styles.name}>Riddhi</div>
       <div className={styles.social}>
+      <a href="https://github.com/CodingLife1024" target="_blank" rel="noopener noreferrer">
         <FaGithub style={style} />
+      </a>
+      <a href="https://www.linkedin.com/in/riddhidipta-pal-854b5b234/" target="_blank" rel="noopener noreferrer">
         <FaLinkedin style={style} />
+      </a>
+      <a href="https://www.instagram.com/coding_1024_/" target="_blank" rel="noopener noreferrer">
         <FaInstagram style={style} />
-        <FaFacebook style={style} />
-        <FaTwitter style={style} />
-      </div>
+      </a>
+    </div>
       <div className={styles.intro}>
         <p>Hi, I am Riddhi, a pre-final year Computer Science undergraduate student at IIT Delhi. My interests are AI and ML algorithms, Web and App Development and Game Theory.</p>
       </div>

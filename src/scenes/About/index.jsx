@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './about.module.css'
 import { FaHome } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const style = { color: "#DBF8FA", fontSize: "25px"}
   return (
     <div className={styles.main}>
       <div className={styles.about}>
-        About Me
-        <FaHome style={style} />
+          About Me
+        <Link to="/">
+          <FaHome style={style} />
+        </Link>
       </div>
       <div className={styles.para}>
         <p>I am Riddhi, a 3rd year student at IIT Delhi. This blog is my attempt to get out of my FOMO.</p>

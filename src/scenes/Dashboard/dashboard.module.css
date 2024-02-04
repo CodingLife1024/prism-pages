@@ -2,7 +2,6 @@
     background-color: #941338;
     /* background-image: url("../../../public/book.jpg"); */
     width: 80%;
-    min-width: fit-content;
     padding: 20px 20px 20px 20px;
     overflow-y: auto;
     flex: 5;
@@ -13,6 +12,7 @@
     padding: 5px 0 5px 0;
     color: white;
     text-decoration: underline;
+    white-space: normal;
 }
 
 .topics a {
@@ -27,4 +27,32 @@
 
 .topics a:hover {
     color: aqua; /* Set the color for hover state */
+}
+
+@media only screen and (max-width: 1000px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 10px 30px 10px 30px;
+    }
+
+    .topics {
+        font-size: 17px;
+        padding: 5px 0 5px 0;
+        color: white;
+        text-decoration: underline;
+        white-space: normal;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 10px;
+    }
 }
