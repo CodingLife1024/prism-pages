@@ -1,6 +1,6 @@
 // App.js
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import PageLoader from './PageLoader/PageLoader';
 import TopBar from './scenes/Topbar';
 import SideBar from './scenes/Sidebar';
@@ -11,21 +11,26 @@ import { postData } from './data/postData';
 import "./App.css"
 
 function App() {
+  const navigate = useNavigate();
+  const [selectedTag, setSelectedTag] = useState("all");
+
+  const handleCategoryClick = (category) => {
+    setSelectedTag(category);
+  };
+
   return (
     <>
-      {/* <PageLoader githubLink="https://api.github.com/repos/CodingLife1024/blog-content/contents/README.md" /> */}
-
       <Routes>
         <Route path="/" element={
           <>
-          <div className='full'>
-            <TopBar />
-            <div className="main-container">
-              <Category />
-              <Dashboard />
-              <SideBar />
+            <div className='full'>
+              <TopBar />
+              <div className="main-container">
+                <Category onCategoryClick={handleCategoryClick} selectedTag={selectedTag} />
+                <Dashboard selectedTag={selectedTag} />
+                <SideBar />
+              </div>
             </div>
-          </div>
           </>
         } />
 
@@ -41,7 +46,6 @@ function App() {
           />
         ))}
       </Routes>
-
     </>
   );
 }

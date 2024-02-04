@@ -14,7 +14,18 @@
     color: #DBF8FA;
 }
 
-.technology, .books, .experiences, .films, .lgbt {
+.categoryLink {
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    text-decoration: none;
+    color: #DBF8FA;
+}
+
+.default {
+    background-color: red; /* Default background color */
     font-size: 20px;
     margin: 10px 0 10px 0;
     padding: 10px;
@@ -22,24 +33,8 @@
     width: fit-content;
 }
 
-.technology {
-    background-color: #CC99CC;
-}
-
-.books {
-    background-color: #C5EFF7;
-}
-
-.lgbt {
-    background-color: #F7B891;
-}
-
-.experiences {
-    background-color: #E08283;
-}
-
-.films {
-    background-color: #C8F7C5;
+.active {
+    background-color: #36454f; /* You can customize the active background color */
 }
 
 @media only screen and (max-width: 1000px) {
@@ -55,7 +50,7 @@
         display: none;
     }
 
-    .technology, .books, .experiences, .films, .lgbt {
+    .default, .active {
         font-size: 15px;
         font-weight: 400;
     }
@@ -70,7 +65,7 @@
         flex: 1;
     }
 
-    .technology, .books, .experiences, .films, .lgbt {
+    .default, .active {
         font-size: 15px;
         font-weight: 400;
     }

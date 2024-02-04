@@ -6,12 +6,16 @@ import styles from './dashboard.module.css';
 // Import your postData array
 import { postData } from '../../data/postData';
 
-const Dashboard = () => {
+const Dashboard = ({ selectedTag }) => {
   const [loading, setLoading] = useState(true);
+  const filteredData =
+    selectedTag && selectedTag !== 'all'
+      ? postData.filter((post) => post.tag === selectedTag)
+      : postData;
 
   useEffect(() => {
     setLoading(false); // No need to fetch data as it comes from postData.js
-  }, []);
+  }, [selectedTag]);
 
   return (
     <div className={styles.dashboard}>
@@ -19,7 +23,7 @@ const Dashboard = () => {
         <p>Loading...</p>
       ) : (
         <Routes>
-          {postData.map((post) => (
+          {filteredData.map((post) => (
             <Route
               key={post.id}
               path={`/${post.link}`}
@@ -30,7 +34,7 @@ const Dashboard = () => {
             path="/"
             element={
               <div className="">
-                {postData.map((post) => (
+                {filteredData.map((post) => (
                   <div key={post.id} className={styles.topics}>
                     <Link to={`/${post.link}`}>{post.title}</Link>
                   </div>

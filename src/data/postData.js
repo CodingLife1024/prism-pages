@@ -12,7 +12,7 @@ export const postData = [
         title: "The All-Nighter Chronicles: Surviving Finals Week with Tech",
         link: "the-all-nighter-chronicles",
         file: "the-all-nighter-chronicles.md",
-        tag: "experiences",
+        tag: "tech",
     },
 
     {
