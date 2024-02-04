@@ -16,7 +16,7 @@
 
 .categoryLink {
     font-size: 20px;
-    margin: 10px 0 10px 0;
+    margin: 0;
     padding: 10px;
     border-radius: 5px;
     width: fit-content;
@@ -24,17 +24,47 @@
     color: #DBF8FA;
 }
 
-.default {
-    background-color: red; /* Default background color */
+.default_all, .default_experiences, .default_books, .default_films, .default_lgbt, .default_tech {
     font-size: 20px;
-    margin: 10px 0 10px 0;
+    color: black;
+    margin: 10px;
     padding: 10px;
     border-radius: 5px;
     width: fit-content;
 }
 
+.default_all{
+    background-color: #8A2BE2;
+}
+
+.default_tech{
+    background-color: #00BFFF;
+}
+
+.default_experiences{
+    background-color: #00FF00;
+}
+
+.default_books{
+    background-color: #FFFF00;
+}
+
+.default_films{
+    background-color: #FFA500;
+}
+
+.default_lgbt{
+    background-color: #FF0000;
+}
+
 .active {
     background-color: #36454f; /* You can customize the active background color */
+    font-size: 20px;
+    color: whiteblack;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -42,7 +72,7 @@
         display: flex;
         flex-direction: row;
         width: fit-content;
-        gap: 20px;
+        gap: 5px;
         padding: 10px 30px 10px 30px;
     }
 
@@ -50,9 +80,10 @@
         display: none;
     }
 
-    .default, .active {
+    .default_all, .default_experiences, .default_books, .default_films, .default_lgbt, .default_tech, .active {
         font-size: 15px;
         font-weight: 400;
+        margin: 0px;
     }
 }
 
@@ -65,8 +96,9 @@
         flex: 1;
     }
 
-    .default, .active {
+    .default_all, .default_experiences, .default_books, .default_films, .default_lgbt, .default_tech, .active {
         font-size: 15px;
         font-weight: 400;
+        margin: 0px;
     }
 }
