@@ -1,6 +1,6 @@
 // App.js
 import React, { useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import PageLoader from './PageLoader/PageLoader';
 import TopBar from './scenes/Topbar';
 import SideBar from './scenes/Sidebar';
@@ -11,7 +11,6 @@ import { postData } from './data/postData';
 import "./App.css"
 
 function App() {
-  const navigate = useNavigate();
   const [selectedTag, setSelectedTag] = useState("all");
 
   const handleCategoryClick = (category) => {
