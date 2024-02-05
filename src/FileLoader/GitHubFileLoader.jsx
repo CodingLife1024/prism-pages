@@ -35,7 +35,7 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   return (
-    <div className="">
+    <div>
       <ReactMarkdown>{fileContent}</ReactMarkdown>
     </div>
   );
