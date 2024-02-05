@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import styles from './githubFileLoader.module.css';
 
 const GitHubFileLoader = ({ githubLink }) => {
   console.log('GitHubFileLoader rendered with githubLink:', githubLink);
@@ -36,7 +35,7 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   return (
-    <div className={styles.githubFileLoader}>
+    <div className="">
       <ReactMarkdown>{fileContent}</ReactMarkdown>
     </div>
   );
