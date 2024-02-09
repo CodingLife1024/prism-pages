@@ -12,12 +12,13 @@
     padding: 5px 0 5px 0;
     color: white;
     text-decoration: underline;
-    white-space: normal;
+    white-space: normal; /* This property allows text to wrap */
 }
 
 .topics a {
     color: white; /* Set the color for hyperlinks */
     text-decoration: underline; /* Optional: Remove underline for hyperlinks */
+    white-space: normal; /* This property allows text to wrap */
 }
 
 /* Additional styles for visited and hover states */
