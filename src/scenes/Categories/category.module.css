@@ -1,5 +1,5 @@
 .category {
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px;
     background-color: #031716;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,9 @@
         flex-direction: row;
         width: fit-content;
         gap: 5px;
-        padding: 10px 30px 10px 30px;
+        padding: 10px 30px;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center items horizontally */
     }
 
     .title {
@@ -89,7 +91,7 @@
 
 @media only screen and (max-width: 500px) {
     .category {
-        padding: 20px 10px 20px 10px;
+        padding: 20px 10px;
         flex-direction: row;
         align-items: center;
         width: fit-content;
@@ -100,5 +102,20 @@
         font-size: 15px;
         font-weight: 400;
         margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .category {
+        padding: 10px 8px;
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+        flex: 1;
+    }
+
+    .default_all, .default_experiences, .default_books, .default_films, .default_lgbt, .default_tech, .active {
+        font-size: 14px;
+        font-weight: 400;
     }
 }
