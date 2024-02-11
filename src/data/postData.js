@@ -4,7 +4,7 @@ export const postData = [
         title: "Pride: A History",
         link: "pride-a-history",
         file: "pride-a-history.md",
-        tag: "lgbt",
+        tags: ["lgbt"],
     },
 
     {
@@ -12,7 +12,7 @@ export const postData = [
         title: "The All-Nighter Chronicles: Surviving Finals Week with Tech",
         link: "the-all-nighter-chronicles",
         file: "the-all-nighter-chronicles.md",
-        tag: "tech",
+        tags: ["tech"],
     },
 
     {
@@ -20,6 +20,6 @@ export const postData = [
         title: "Readme",
         link: "readme",
         file: "README.md",
-        tag: "books",
+        tags: ["books", "tech"],
     },
 ]

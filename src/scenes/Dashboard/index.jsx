@@ -10,7 +10,7 @@ const Dashboard = ({ selectedTag }) => {
   const [loading, setLoading] = useState(true);
   const filteredData =
     selectedTag && selectedTag !== 'all'
-      ? postData.filter((post) => post.tag === selectedTag)
+      ? postData.filter((post) => post.tags.includes(selectedTag))
       : postData;
 
   useEffect(() => {
