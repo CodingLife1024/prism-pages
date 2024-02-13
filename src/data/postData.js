@@ -14,12 +14,5 @@ export const postData = [
         file: "the-falling.md",
         tags: ["films"],
     },
-
-    {
-        id: 3,
-        title: "Readme",
-        link: "readme",
-        file: "README.md",
-        tags: ["books", "tech"],
-    },
+    
 ]
