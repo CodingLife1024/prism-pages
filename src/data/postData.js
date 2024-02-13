@@ -9,10 +9,10 @@ export const postData = [
 
     {
         id: 2,
-        title: "The All-Nighter Chronicles: Surviving Finals Week with Tech",
-        link: "the-all-nighter-chronicles",
-        file: "the-all-nighter-chronicles.md",
-        tags: ["tech"],
+        title: "The Falling(2014)",
+        link: "the-falling",
+        file: "the-falling.md",
+        tags: ["films"],
     },
 
     {
