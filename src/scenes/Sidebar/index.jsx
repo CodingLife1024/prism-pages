@@ -6,8 +6,8 @@ const SideBar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.texts}>My Website</div>
-      <div className={styles.texts}>Books</div>
-      <div className={styles.texts}>Movies</div>
+      <Link to="/books" className={styles.texts}>Books</Link>
+      <Link to="/TV" className={styles.texts}>TV</Link>
       <Link to="/about" className={styles.texts}>About</Link>
     </div>
   )

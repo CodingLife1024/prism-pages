@@ -34,6 +34,8 @@ function App() {
         } />
 
         <Route path="/about" element={<About />} />
+        <Route path="/books" element={<PageLoader githubLink={`https://api.github.com/repos/CodingLife1024/blog-content/contents/books.md`} />} />
+        <Route path="/TV" element={<PageLoader githubLink={`https://api.github.com/repos/CodingLife1024/blog-content/contents/TV.md`} />} />
 
         {postData.map((post) => (
           <Route

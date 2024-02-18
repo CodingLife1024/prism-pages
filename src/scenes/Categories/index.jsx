@@ -14,7 +14,7 @@ const Category = ({ onCategoryClick, selectedTag }) => {
       <Link to="/" onClick={() => handleClick("tech")} className={`${styles.categoryLink} ${selectedTag === "tech" ? styles.active : styles.default_tech}`}>Technology</Link>
       <Link to="/" onClick={() => handleClick("experiences")} className={`${styles.categoryLink} ${selectedTag === "experiences" ? styles.active : styles.default_experiences}`}>Experiences</Link>
       <Link to="/" onClick={() => handleClick("books")} className={`${styles.categoryLink} ${selectedTag === "books" ? styles.active : styles.default_books}`}>Books</Link>
-      <Link to="/" onClick={() => handleClick("films")} className={`${styles.categoryLink} ${selectedTag === "films" ? styles.active : styles.default_films}`}>Films</Link>
+      <Link to="/" onClick={() => handleClick("TV")} className={`${styles.categoryLink} ${selectedTag === "TV" ? styles.active : styles.default_films}`}>TV</Link>
       <Link to="/" onClick={() => handleClick("lgbt")} className={`${styles.categoryLink} ${selectedTag === "lgbt" ? styles.active : styles.default_lgbt}`}>LGBT</Link>
     </div>
   );
