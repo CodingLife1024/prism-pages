@@ -1,7 +1,7 @@
 export const postData = [
 
     {
-        id: 5,
+        id: 6,
         title: "Dijkstra's Prime finding algorithm",
         link: "dijkstra-prime-finding",
         file: "dijkstra-prime-finding.md",
@@ -9,11 +9,19 @@ export const postData = [
     },
 
     {
-        id: 4,
+        id: 5,
         title: "Types of B-trees",
         link: "types-of-b-trees",
         file: "types-of-b-trees.md",
         tags: ["tech"],
+    },
+
+    {
+        id: 4,
+        title: "The Exam-season Weather",
+        link: "the-exam-season-weather",
+        file: "the-exam-season-weather.md",
+        tags: ["experiences"],
     },
 
     {
