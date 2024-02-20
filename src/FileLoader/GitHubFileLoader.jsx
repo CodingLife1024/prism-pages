@@ -1,8 +1,7 @@
-// src/GitHubFileLoader.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const GitHubFileLoader = ({ githubLink }) => {
   console.log('GitHubFileLoader rendered with githubLink:', githubLink);
@@ -36,7 +35,9 @@ const GitHubFileLoader = ({ githubLink }) => {
 
   return (
     <div>
-      <ReactMarkdown>{fileContent}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        {fileContent}
+      </ReactMarkdown>
     </div>
   );
 };
