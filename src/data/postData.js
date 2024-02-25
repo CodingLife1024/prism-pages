@@ -5,7 +5,7 @@ export const postData = [
         title: "Harry Potter: The Sorting Hat",
         link: "the-sorting-hat",
         file: "the-sorting-hat.md",
-        tags: ["books", "TV"],
+        tags: ["books", "TV"], 
     },
 
     {
