@@ -2,10 +2,10 @@ export const postData = [
 
     {
         id: 6,
-        title: "Dijkstra's Prime finding algorithm",
-        link: "dijkstra-prime-finding",
-        file: "dijkstra-prime-finding.md",
-        tags: ["tech"],
+        title: "Harry Potter: The Sorting Hat",
+        link: "the-sorting-hat",
+        file: "the-sorting-hat.md",
+        tags: ["books", "TV"],
     },
 
     {
