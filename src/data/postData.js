@@ -5,16 +5,16 @@ export const postData = [
         title: "Harry Potter: The Sorting Hat",
         link: "the-sorting-hat",
         file: "the-sorting-hat.md",
-        tags: ["books", "TV"], 
+        tags: ["books", "TV"],
     },
 
-    {
-        id: 5,
-        title: "Types of B-trees",
-        link: "types-of-b-trees",
-        file: "types-of-b-trees.md",
-        tags: ["tech"],
-    },
+    // {
+    //     id: 5,
+    //     title: "Types of B-trees",
+    //     link: "types-of-b-trees",
+    //     file: "types-of-b-trees.md",
+    //     tags: ["tech"],
+    // },
 
     {
         id: 4,
