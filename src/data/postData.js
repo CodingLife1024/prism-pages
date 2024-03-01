@@ -2,27 +2,27 @@ export const postData = [
 
     {
         id: 7,
-        title: "Harry Potter: On Salazar",
+        title: "Types of B-trees",
+        link: "types-of-b-trees",
+        file: "types-of-b-trees.md",
+        tags: ["tech"],
+    },
+
+    {
+        id: 6,
+        title: "Harry Potter: On Salazar Slytherin",
         link: "salazar-slytherin",
         file: "salazar-slytherin.md",
         tags: ["books", "TV"],
     },
 
     {
-        id: 6,
+        id: 5,
         title: "Harry Potter: The Sorting Hat",
         link: "the-sorting-hat",
         file: "the-sorting-hat.md",
         tags: ["books", "TV"],
     },
-
-    // {
-    //     id: 5,
-    //     title: "Types of B-trees",
-    //     link: "types-of-b-trees",
-    //     file: "types-of-b-trees.md",
-    //     tags: ["tech"],
-    // },
 
     {
         id: 4,
