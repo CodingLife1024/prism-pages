@@ -8,6 +8,7 @@ import Dashboard from './scenes/Dashboard';
 import Category from './scenes/Categories';
 import About from './scenes/About';
 import { postData } from './data/postData';
+import Layout from './Layout';
 import "./App.css"
 
 function App() {
