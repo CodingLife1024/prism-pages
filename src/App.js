@@ -20,6 +20,7 @@ function App() {
 
   return (
     <>
+      <Layout>
       <Routes>
         <Route path="/" element={
           <>
@@ -46,6 +47,7 @@ function App() {
           />
         ))}
       </Routes>
+      </Layout>
     </>
   );
 }
