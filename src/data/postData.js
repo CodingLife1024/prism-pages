@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 7,
+        title: "Harry Potter: On Salazar",
+        link: "salazar-slytherin",
+        file: "salazar-slytherin.md",
+        tags: ["books", "TV"],
+    },
+
+    {
         id: 6,
         title: "Harry Potter: The Sorting Hat",
         link: "the-sorting-hat",
