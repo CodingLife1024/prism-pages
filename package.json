@@ -3,6 +3,7 @@
   "name": "prism-pages",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -46,6 +47,7 @@
       "react-app/jest"
     ]
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
@@ -66,4 +68,5 @@
   "author": "",
   "license": "ISC",
   "description": ""
+
 }
