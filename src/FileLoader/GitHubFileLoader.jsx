@@ -35,7 +35,12 @@ const GitHubFileLoader = ({ githubLink }) => {
 
   return (
     <div style={{ maxWidth: '100%', wordWrap: 'break-word', height: 'fit-content'}}>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}
+        components={{
+          img: ({ node, ...props }) => (
+            <img {...props} style={{ width: '100%' }} alt="" />
+          )
+      }}>
         {fileContent}
       </ReactMarkdown>
     </div>
