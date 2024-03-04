@@ -1,6 +1,6 @@
 .main{
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
     background-color: #031716f8;
     color: #DBF8FA;
@@ -8,4 +8,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
     font-size: 20px;
+    height: fit-content;
+    overflow-y: none;
 }
