@@ -1,12 +1,12 @@
 export const postData = [
 
-    // {
-    //     id: 7,
-    //     title: "Types of B-trees",
-    //     link: "types-of-b-trees",
-    //     file: "types-of-b-trees.md",
-    //     tags: ["tech"],
-    // },
+    {
+        id: 7,
+        title: "Types of B-trees",
+        link: "types-of-b-trees",
+        file: "types-of-b-trees.md",
+        tags: ["tech"],
+    },
 
     {
         id: 6,
