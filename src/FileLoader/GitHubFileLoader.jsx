@@ -6,7 +6,6 @@ import remarkGfm from 'remark-gfm';
 const GitHubFileLoader = ({ githubLink }) => {
   console.log('GitHubFileLoader rendered with githubLink:', githubLink);
   const [fileContent, setFileContent] = useState(() => {
-    // Try to load content from localStorage on component mount
     const storedContent = localStorage.getItem('githubFileContent');
     return storedContent ? atob(storedContent) : '';
   });
@@ -34,9 +33,8 @@ const GitHubFileLoader = ({ githubLink }) => {
 
   return (
     <div style={{ maxWidth: '100%', wordWrap: 'break-word', height: 'fit-content'}}>
-      {/* Include remarkGfm plugin in the ReactMarkdown component */}
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]} // Here's the change
+        remarkPlugins={[remarkGfm]}
         components={{
           img: ({ node, ...props }) => (
             <img {...props} style={{ width: '100%' }} alt="" />
