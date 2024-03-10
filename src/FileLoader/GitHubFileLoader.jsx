@@ -19,7 +19,6 @@ const GitHubFileLoader = ({ githubLink }) => {
 
         if (data.content) {
           const content = atob(data.content);
-          // Save content to localStorage
           localStorage.setItem('githubFileContent', data.content);
           setFileContent(content);
         } else {
@@ -35,12 +34,33 @@ const GitHubFileLoader = ({ githubLink }) => {
 
   return (
     <div style={{ maxWidth: '100%', wordWrap: 'break-word', height: 'fit-content'}}>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}
+      {/* Include remarkGfm plugin in the ReactMarkdown component */}
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]} // Here's the change
         components={{
           img: ({ node, ...props }) => (
             <img {...props} style={{ width: '100%' }} alt="" />
+          ),
+          table: ({ node, ...props }) => (
+            <table {...props} style={{
+              borderCollapse: 'collapse',
+              width: '100%'
+            }} />
+          ),
+          th: ({ node, ...props }) => (
+            <th {...props} style={{
+              border: '1px solid #ddd',
+              padding: '8px'
+            }} />
+          ),
+          td: ({ node, ...props }) => (
+            <td {...props} style={{
+              border: '1px solid #ddd',
+              padding: '8px'
+            }} />
           )
-      }}>
+        }}
+      >
         {fileContent}
       </ReactMarkdown>
     </div>
