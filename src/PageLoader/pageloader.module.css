@@ -3,8 +3,21 @@
     max-width: 800px;
     width: 100%;
     padding: 20px;
+    font-size: 20px;
     background-color: #031716f8;
     color: #DBF8FA;
     font-family: 'Arial', sans-serif;
     height: fit-content;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        font-size: 10px;
+    }
 }
