@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 8,
+        title: "Midnight Mass",
+        link: "midnight-mass",
+        file: "midnight-mass.md",
+        tags: ["TV"],
+    },
+
+    {
         id: 7,
         title: "Types of B-trees",
         link: "types-of-b-trees",
