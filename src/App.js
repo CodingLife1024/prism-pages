@@ -9,9 +9,25 @@ import Category from './scenes/Categories';
 import About from './scenes/About';
 import { postData } from './data/postData';
 import Layout from './Layout';
+import ReactGA from 'react-ga4';
 import "./App.css"
 
+
+ReactGA.initialize('G-FZG9F8BZPG');
+
 function App() {
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
+  const handleButtonClick = () => {
+    ReactGA.event({
+      category: 'User',
+      action: 'Clicked a button'
+    });
+  };
+
   const [selectedTag, setSelectedTag] = useState("all");
 
   const handleCategoryClick = (category) => {
