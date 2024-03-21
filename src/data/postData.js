@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 9,
+        title: "Fictional Villains",
+        link: "fictional-villains",
+        file: "fictional-villains.md",
+        tags: ["TV", "books"],
+    },
+
+    {
         id: 8,
         title: "Midnight Mass",
         link: "midnight-mass",
