@@ -29,6 +29,11 @@ const GitHubFileLoader = ({ githubLink }) => {
     };
 
     fetchFileContent();
+
+    // Cleanup function
+    return () => {
+      localStorage.removeItem('githubFileContent');
+    };
   }, [githubLink]);
 
   return (
