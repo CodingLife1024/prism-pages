@@ -77,7 +77,7 @@ export const postData = [
         title: "Pride: A History",
         link: "pride-a-history",
         file: "pride-a-history.md",
-        tags: ["lgbt"],
+        tags: ["lgbt", "experiences"],
     },
 
 ]
