@@ -4,7 +4,7 @@ export const postData = [
         id: 10,
         title: "AI Art: Experiences and Controversies",
         link: "ai-art",
-        file: "fai-art.md",
+        file: "ai-art.md",
         tags: ["tech", "experiences"],
     },
 
