@@ -4,7 +4,7 @@ export const postData = [
         id: 11,
         title: "A History of Gay Rights in India",
         link: "history-of-gay-rights-in-india",
-        file: "gay-rights.md",
+        file: "history-of-gay-rights-in-india.md",
         tags: ["lgbt"],
     },
 
