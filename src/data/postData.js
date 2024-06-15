@@ -5,7 +5,7 @@ export const postData = [
         title: "Studio Ghibli films: The Theme of Growing Up",
         link: "studio-ghibli-films",
         file: "studio-ghibli-films.md",
-        tags: ["films"],
+        tags: ["TV"],
     },
 
     {
