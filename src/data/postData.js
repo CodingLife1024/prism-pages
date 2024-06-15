@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 12,
+        title: "Studio Ghibli films: The Theme of Growing Up",
+        link: "studio-ghibli-films",
+        file: "studio-ghibli-films.md",
+        tags: ["films"],
+    },
+
+    {
         id: 11,
         title: "A History of Gay Rights in India",
         link: "history-of-gay-rights-in-india",
