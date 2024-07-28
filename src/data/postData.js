@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 13,
+        title: "Reflections on my College Journey: As a Final year student",
+        link: "reflections-on-my-college-journey",
+        file: "reflections-on-my-college-journey.md",
+        tags: ["experiences"],
+    },
+
+    {
         id: 12,
         title: "Studio Ghibli films: The Theme of Growing Up",
         link: "studio-ghibli-films",
