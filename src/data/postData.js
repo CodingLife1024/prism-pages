@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 14,
+        title: "Internship Experiences: An Essay to Future Me",
+        link: "internship-experiences",
+        file: "internship-experiences.md",
+        tags: ["experiences", "tech"],
+    },
+
+    {
         id: 13,
         title: "Reflections on my College Journey: As a Final year student",
         link: "reflections-on-my-college-journey",
