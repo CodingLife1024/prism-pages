@@ -7,7 +7,7 @@
     background-color: #031716f8;
     color: #DBF8FA;
     font-family: 'Arial', sans-serif;
-    height: fit-content;
+    height: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
