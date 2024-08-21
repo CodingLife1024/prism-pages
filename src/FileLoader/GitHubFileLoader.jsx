@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import 'katex/dist/katex.min.css'; // Import the KaTeX CSS for styling
+// import 'katex/dist/katex.min.css';
 
 const GitHubFileLoader = ({ githubLink }) => {
   console.log('GitHubFileLoader rendered with githubLink:', githubLink);
@@ -40,7 +40,7 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   return (
-    <div style={{ maxWidth: '100%', wordWrap: 'break-word', height: 'fit-content'}}>
+    <div style={{ maxWidth: '100%', wordWrap: 'break-word', height: 'fit-content', padding: '20px'}}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex]}
