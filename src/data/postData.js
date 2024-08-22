@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 16,
+        title: "Black Scholes Model: The Greeks",
+        link: "black-scholes-the-greeks",
+        file: "black-scholes-the-greeks.md",
+        tags: ["tech"],
+    },
+
+    {
         id: 15,
         title: "Black Scholes Model: Introduction",
         link: "black-scholes-introduction",
