@@ -19,7 +19,7 @@ const TopBar = () => {
       </a>
     </div>
       <div className={styles.intro}>
-        <p>I am a pre-final year Computer Science undergraduate student at IIT Delhi. My interests are AI and ML algorithms, Web and App Development and Game Theory.</p>
+        <p>I am a final year Computer Science undergraduate student at IIT Delhi. My interests are AI and ML algorithms, Web and App Development and Game Theory.</p>
       </div>
       <div className={styles.interests}>
         I am a part of <a href="https://facciitd.netlify.app/" target="_blank" rel="noreferrer">Azure</a> (IITD Art Club) and <a href="https://indradhanuiitd.in/" target="_blank" rel="noreferrer">Indradhanu</a> (Queer Collective).
