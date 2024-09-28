@@ -2,9 +2,9 @@ export const postData = [
 
     {
         id: 17,
-        title: "Foul Play: Poems on Swearing",
-        link: "foul-play",
-        file: "foul-play.md",
+        title: "Curses and Verses: Poems on Swearing",
+        link: "curses-and-verses",
+        file: "curses-and-verses.md",
         tags: ["experiences", "books"],
     },
 
