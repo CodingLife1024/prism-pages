@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 17,
+        title: "Foul Play: Poems on Swearing",
+        link: "foul-play",
+        file: "foul-play.md",
+        tags: ["experiences", "books"],
+    },
+
+    {
         id: 16,
         title: "Black Scholes Model: The Greeks",
         link: "black-scholes-the-greeks",
