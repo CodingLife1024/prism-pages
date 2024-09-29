@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 18,
+        title: "Speaking in Tongues: On Being Multilingual",
+        link: "speaking-in-tongues",
+        file: "speaking-in-tongues.md",
+        tags: ["experiences", "books"],
+    },
+
+    {
         id: 17,
         title: "Curses and Verses: Poems on Swearing",
         link: "curses-and-verses",
