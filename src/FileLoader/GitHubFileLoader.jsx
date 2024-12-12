@@ -40,36 +40,23 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   return (
-    <div style={{ maxWidth: '100%', wordWrap: 'break-word', height: 'fit-content', padding: '20px'}}>
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeKatex]}
-        components={{
-          img: ({ node, ...props }) => (
-            <img {...props} style={{ width: '100%' }} alt="" />
-          ),
-          table: ({ node, ...props }) => (
-            <table {...props} style={{
-              borderCollapse: 'collapse',
-              width: '100%'
-            }} />
-          ),
-          th: ({ node, ...props }) => (
-            <th {...props} style={{
-              border: '1px solid #ddd',
-              padding: '8px'
-            }} />
-          ),
-          td: ({ node, ...props }) => (
-            <td {...props} style={{
-              border: '1px solid #ddd',
-              padding: '8px'
-            }} />
-          )
-        }}
-      >
-        {fileContent}
-      </ReactMarkdown>
+    <div style={{ maxWidth: '100%', padding: '20px' }}>
+      {fileContent ? (
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm, remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+          components={{
+            img: ({ node, ...props }) => <img {...props} style={{ width: '100%' }} alt="" />,
+            table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%' }} />,
+            th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
+            td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
+          }}
+        >
+          {fileContent}
+        </ReactMarkdown>
+      ) : (
+        <p>Loading content...</p>
+      )}
     </div>
   );
 };

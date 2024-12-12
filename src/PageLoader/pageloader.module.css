@@ -1,5 +1,6 @@
 body {
     overflow-y: inherit;
+    height: fit-content;
 }
 
 .main{
