@@ -2,7 +2,7 @@ export const postData = [
 
     {
         id: 19,
-        title: "The Last Thread - On Despair and Desperation",
+        title: "The Last Thread: On Despair and Desperation",
         link: "despair-and-desperation",
         file: "despair-and-desperation.md",
         tags: ["books"],
