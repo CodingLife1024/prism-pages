@@ -6,7 +6,7 @@ body, html {
   height: 100vh;
   background-color: #031716;
   overflow-x: hidden;
-} 
+}
 
 .main-container {
   display: flex; /* Use flexbox to arrange child components horizontally */
@@ -18,6 +18,6 @@ body, html {
   .main-container {
     display: flex;
     flex-direction: column;
-
+    
   }
 }
