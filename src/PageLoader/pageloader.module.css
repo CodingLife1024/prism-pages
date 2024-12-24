@@ -1,30 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     overflow-y: inherit;
     height: fit-content;
 }
 
-.main{
+.main {
     width: 100%;
     font-size: 20px;
     background-color: #031716f8;
     color: #DBF8FA;
     font-family: 'Arial', sans-serif;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.sub {
+    min-width: fit-content; /* Limit width for better readability */
+    max-width: 1000px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+    padding: 15px; /* Internal spacing */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #1FBFAF;
+    margin: 1em 0 0.5em;
+}
+
+/* Code Blocks */
+pre, code {
+    font-family: 'Courier New', monospace;
+    background-color: #002b36;
+    color: #93a1a1;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #2f4f4f;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #013437;
+    color: #ffffff;
+}
+
+.markdown {
+    font-size: inherit;
+    color: inherit;
+    line-height: 1.6;
+}
+
+.markdown img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.markdown a {
+    color: #1FBFAF;
+    text-decoration: none;
+}
+
+.markdown a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1000px) {
     .main {
         font-size: 15px;
+        padding: 0; /* Add padding for spacing */
+    }
+
+    .sub {
+        padding: 5px;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .main {
         font-size: 12px;
+        padding: 0; /* Add padding for spacing */
+    }
+
+    .sub {
+        padding: 5px;
     }
 }
 
 @media only screen and (max-width: 300px) {
     .main {
         font-size: 10px;
+        padding: 0; /* Add padding for spacing */
+    }
+
+    .sub {
+        padding: 0;
     }
 }
