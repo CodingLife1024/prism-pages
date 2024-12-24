@@ -5,25 +5,22 @@
 }
 
 body {
-    overflow-y: inherit;
     height: fit-content;
+    overflow-y: inherit;
 }
 
-.main {
+.mainContent {
     width: 100%;
     font-size: 20px;
     background-color: #031716f8;
     color: #DBF8FA;
     font-family: 'Arial', sans-serif;
-    padding: 20px; /* Add padding for spacing */
+    padding: 20px 0 20px 0; /* Add padding for spacing */
 }
 
 .sub {
     min-width: fit-content; /* Limit width for better readability */
     max-width: 1000px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the content */
-    padding: 15px; /* Internal spacing */
-    border-radius: 10px; /* Add rounded corners */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
@@ -89,7 +86,7 @@ th {
 }
 
 @media only screen and (max-width: 1000px) {
-    .main {
+    .mainContent {
         font-size: 15px;
         padding: 0; /* Add padding for spacing */
     }
@@ -100,7 +97,7 @@ th {
 }
 
 @media only screen and (max-width: 500px) {
-    .main {
+    .mainContent {
         font-size: 12px;
         padding: 0; /* Add padding for spacing */
     }
@@ -111,7 +108,7 @@ th {
 }
 
 @media only screen and (max-width: 300px) {
-    .main {
+    .mainContent {
         font-size: 10px;
         padding: 0; /* Add padding for spacing */
     }

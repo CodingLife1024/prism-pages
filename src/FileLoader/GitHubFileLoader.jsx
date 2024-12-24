@@ -8,7 +8,6 @@ import 'katex/dist/katex.min.css';
 import styles from './../PageLoader/pageloader.module.css';
 
 const GitHubFileLoader = ({ githubLink }) => {
-  console.log('GitHubFileLoader rendered with githubLink:', githubLink);
   const [fileContent, setFileContent] = useState(() => {
     const storedContent = localStorage.getItem('githubFileContent');
     return storedContent ? atob(storedContent) : '';
@@ -41,29 +40,26 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   return (
-    <div style={{ maxWidth: '100%', padding: '30px', overflowY: 'auto', maxHeight: 'calc(100vh - 60px)' }}>
+    <div style={{ maxWidth: '100%', padding: '30px', overflowY: 'auto' }}>
       {fileContent ? (
-        <div style={{ overflowY: 'auto' }}>
-          <ReactMarkdown
-            className={styles.markdown}
-            remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
-            components={{
-              img: ({ node, ...props }) => <img {...props} style={{ width: '100%' }} alt="" />,
-              table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%' }} />,
-              th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
-              td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
-            }}
-          >
-            {fileContent}
-          </ReactMarkdown>
-        </div>
+        <ReactMarkdown
+          className={styles.markdown}
+          remarkPlugins={[remarkGfm, remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+          components={{
+            img: ({ node, ...props }) => <img {...props} style={{ width: '100%' }} alt="" />,
+            table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%' }} />,
+            th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
+            td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
+          }}
+        >
+          {fileContent}
+        </ReactMarkdown>
       ) : (
         <p>Loading content...</p>
       )}
     </div>
   );
-
 };
 
 export default GitHubFileLoader;

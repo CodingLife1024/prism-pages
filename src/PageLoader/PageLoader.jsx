@@ -6,7 +6,7 @@ import styles from './pageloader.module.css'
 
 const PageLoader = ( {githubLink} ) => {
   return (
-    <div className={styles.main}>
+    <div className={styles.mainContent}>
       <div className={styles.sub}>
         <GitHubFileLoader githubLink={githubLink} />
       </div>
