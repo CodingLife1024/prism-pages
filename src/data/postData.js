@@ -2,7 +2,7 @@ export const postData = [
 
     {
         id: 20,
-        title: "# Echoes in the Crowd: A Journey Through Solitude",
+        title: "Echoes in the Crowd: A Journey Through Solitude",
         link: "echoes-in-the-crowd",
         file: "echoes-in-the-crowd.md",
         tags: ["books"],
