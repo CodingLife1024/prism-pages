@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 20,
+        title: "# Echoes in the Crowd: A Journey Through Solitude",
+        link: "echoes-in-the-crowd",
+        file: "echoes-in-the-crowd.md",
+        tags: ["books"],
+    },
+
+    {
         id: 19,
         title: "The Last Thread: On Despair and Desperation",
         link: "despair-and-desperation",
