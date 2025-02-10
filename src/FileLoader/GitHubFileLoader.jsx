@@ -33,11 +33,26 @@ const GitHubFileLoader = ({ githubLink }) => {
 
     fetchFileContent();
 
-    // Cleanup function
     return () => {
       localStorage.removeItem('githubFileContent');
     };
   }, [githubLink]);
+
+  // Function to detect and render progress bars
+  const renderProgress = ({ children }) => {
+    const text = children[0];
+    const match = text.match(/(\d{1,3})%/);
+
+    if (match) {
+      const progressValue = parseInt(match[1], 10);
+      return (
+        <p>
+          <progress value={progressValue} max="100"></progress> {progressValue}%
+        </p>
+      );
+    }
+    return <p>{text}</p>;
+  };
 
   return (
     <div style={{ maxWidth: '100%', padding: '30px', overflowY: 'auto' }}>
@@ -51,6 +66,7 @@ const GitHubFileLoader = ({ githubLink }) => {
             table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%' }} />,
             th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
             td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
+            p: renderProgress, // Override <p> elements to detect progress bars
           }}
         >
           {fileContent}
