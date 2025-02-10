@@ -39,19 +39,11 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   // Function to detect and render progress bars
-  const renderProgress = ({ children }) => {
-    const text = children[0];
-    const match = text.match(/(\d{1,3})%/);
-
-    if (match) {
-      const progressValue = parseInt(match[1], 10);
-      return (
-        <p>
-          <progress value={progressValue} max="100"></progress> {progressValue}%
-        </p>
-      );
+  const renderProgress = ({ node, children }) => {
+    if (node.children[0].type === 'element' && node.children[0].tagName === 'progress') {
+      return <div>{children}</div>;
     }
-    return <p>{text}</p>;
+    return <p>{children}</p>;
   };
 
   return (
@@ -66,7 +58,8 @@ const GitHubFileLoader = ({ githubLink }) => {
             table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%' }} />,
             th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
             td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
-            p: renderProgress, // Override <p> elements to detect progress bars
+            p: renderProgress,
+            progress: ({ node, ...props }) => <progress {...props} />,
           }}
         >
           {fileContent}
