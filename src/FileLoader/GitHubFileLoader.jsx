@@ -9,6 +9,17 @@ import emoji from 'remark-emoji';
 import 'katex/dist/katex.min.css';
 import styles from './../PageLoader/pageloader.module.css';
 
+const getColumnStyle = (content) => {
+  switch (content.toLowerCase()) {
+    case 'name':
+      return { width: '30%' };
+    case 'description':
+      return { width: '50%' };
+    default:
+      return { width: '20%' };
+  }
+};
+
 const GitHubFileLoader = ({ githubLink }) => {
   const [fileContent, setFileContent] = useState(() => {
     const storedContent = localStorage.getItem('githubFileContent');
