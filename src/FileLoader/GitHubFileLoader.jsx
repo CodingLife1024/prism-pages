@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
+import emoji from 'remark-emoji';
 import 'katex/dist/katex.min.css';
 import styles from './../PageLoader/pageloader.module.css';
 
@@ -38,12 +40,11 @@ const GitHubFileLoader = ({ githubLink }) => {
     };
   }, [githubLink]);
 
-  // Function to detect and render progress bars
-  const renderProgress = ({ node, children }) => {
+  const renderProgress = ({ node, ...props }) => {
     if (node.children[0].type === 'element' && node.children[0].tagName === 'progress') {
-      return <div>{children}</div>;
+      return <div {...props} />;
     }
-    return <p>{children}</p>;
+    return <p {...props} />;
   };
 
   return (
@@ -51,15 +52,15 @@ const GitHubFileLoader = ({ githubLink }) => {
       {fileContent ? (
         <ReactMarkdown
           className={styles.markdown}
-          remarkPlugins={[remarkGfm, remarkMath]}
-          rehypePlugins={[rehypeKatex]}
+          remarkPlugins={[remarkGfm, remarkMath, emoji]}
+          rehypePlugins={[rehypeKatex, rehypeRaw]}
           components={{
-            img: ({ node, ...props }) => <img {...props} style={{ width: '100%' }} alt="" />,
-            table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%' }} />,
+            img: ({ node, ...props }) => <img {...props} style={{ maxWidth: '100%', height: 'auto' }} alt="" />,
+            table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1rem' }} />,
             th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
             td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
             p: renderProgress,
-            progress: ({ node, ...props }) => <progress {...props} />,
+            progress: ({ node, ...props }) => <progress {...props} style={{ width: '100%' }} />,
           }}
         >
           {fileContent}
