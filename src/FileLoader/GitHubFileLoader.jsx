@@ -68,6 +68,8 @@ const GitHubFileLoader = ({ githubLink }) => {
                 ...getColumnStyle(index),
                 border: '1px solid #ddd',
                 padding: '8px',
+                textAlign: 'center', // Center align the header text
+                verticalAlign: 'middle', // Vertically center the content
               };
               return <th {...props} style={style}>{children}</th>;
             },
@@ -77,6 +79,8 @@ const GitHubFileLoader = ({ githubLink }) => {
                 ...getColumnStyle(index),
                 border: '1px solid #ddd',
                 padding: '8px',
+                textAlign: 'center', // Center align the header text
+                verticalAlign: 'middle', // Vertically center the content
               };
               return <td {...props} style={style}>{children}</td>;
             },
