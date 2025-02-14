@@ -9,11 +9,6 @@ import emoji from 'remark-emoji';
 import 'katex/dist/katex.min.css';
 import styles from './../PageLoader/pageloader.module.css';
 
-const getColumnStyle = (index) => {
-  const widths = ['5%', '20%', '15%', '20%', '40%'];
-  return { width: widths[index] || '20%' };
-};
-
 const GitHubFileLoader = ({ githubLink }) => {
   const [fileContent, setFileContent] = useState(() => {
     const storedContent = localStorage.getItem('githubFileContent');
@@ -65,7 +60,7 @@ const GitHubFileLoader = ({ githubLink }) => {
             th: ({ node, children, ...props }) => {
               const index = node.position?.start.column - 1;
               const style = {
-                ...getColumnStyle(index),
+                width: ['5%', '20%', '15%', '20%', '40%'][index] || '20%', // Set the width of the column
                 border: '1px solid #ddd',
                 padding: '8px',
                 textAlign: 'center', // Center align the header text
@@ -76,7 +71,7 @@ const GitHubFileLoader = ({ githubLink }) => {
             td: ({ node, children, ...props }) => {
               const index = node.position?.start.column - 1;
               const style = {
-                ...getColumnStyle(index),
+                width: ['5%', '20%', '15%', '20%', '40%'][index] || '20%', // Set the width of the column
                 border: '1px solid #ddd',
                 padding: '8px',
                 textAlign: 'center', // Center align the header text
