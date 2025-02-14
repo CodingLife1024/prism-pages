@@ -60,7 +60,7 @@ const GitHubFileLoader = ({ githubLink }) => {
             th: ({ node, children, ...props }) => {
               const index = node.position?.start.column - 1;
               const style = {
-                width: ['5%', '20%', '15%', '20%', '40%'][index] || '20%', // Set the width of the column
+                width: ['5%', '30%', '15%', '20%', '20%'][index] || '20%', // Set the width of the column
                 border: '1px solid #ddd',
                 padding: '8px',
                 textAlign: 'center', // Center align the header text
@@ -71,7 +71,7 @@ const GitHubFileLoader = ({ githubLink }) => {
             td: ({ node, children, ...props }) => {
               const index = node.position?.start.column - 1;
               const style = {
-                width: ['5%', '20%', '15%', '20%', '40%'][index] || '20%', // Set the width of the column
+                width: ['5%', '30%', '15%', '20%', '20%'][index] || '20%', // Set the width of the column
                 border: '1px solid #ddd',
                 padding: '8px',
                 textAlign: 'center', // Center align the header text
