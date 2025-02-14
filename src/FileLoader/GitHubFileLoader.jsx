@@ -9,15 +9,9 @@ import emoji from 'remark-emoji';
 import 'katex/dist/katex.min.css';
 import styles from './../PageLoader/pageloader.module.css';
 
-const getColumnStyle = (content) => {
-  switch (content.toLowerCase()) {
-    case 'name':
-      return { width: '30%' };
-    case 'description':
-      return { width: '50%' };
-    default:
-      return { width: '20%' };
-  }
+const getColumnStyle = (index) => {
+  const widths = ['5%', '20%', '15%', '20%', '40%'];
+  return { width: widths[index] || '20%' };
 };
 
 const GitHubFileLoader = ({ githubLink }) => {
@@ -52,7 +46,7 @@ const GitHubFileLoader = ({ githubLink }) => {
   }, [githubLink]);
 
   const renderProgress = ({ node, ...props }) => {
-    if (node.children[0].type === 'element' && node.children[0].tagName === 'progress') {
+    if (node.children[0]?.type === 'element' && node.children[0]?.tagName === 'progress') {
       return <div {...props} />;
     }
     return <p {...props} />;
@@ -68,8 +62,24 @@ const GitHubFileLoader = ({ githubLink }) => {
           components={{
             img: ({ node, ...props }) => <img {...props} style={{ maxWidth: '100%', height: 'auto' }} alt="" />,
             table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1rem' }} />,
-            th: ({ node, ...props }) => <th {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
-            td: ({ node, ...props }) => <td {...props} style={{ border: '1px solid #ddd', padding: '8px' }} />,
+            th: ({ node, children, ...props }) => {
+              const index = node.position?.start.column - 1;
+              const style = {
+                ...getColumnStyle(index),
+                border: '1px solid #ddd',
+                padding: '8px',
+              };
+              return <th {...props} style={style}>{children}</th>;
+            },
+            td: ({ node, children, ...props }) => {
+              const index = node.position?.start.column - 1;
+              const style = {
+                ...getColumnStyle(index),
+                border: '1px solid #ddd',
+                padding: '8px',
+              };
+              return <td {...props} style={style}>{children}</td>;
+            },
             p: renderProgress,
             progress: ({ node, ...props }) => <progress {...props} style={{ width: '100%' }} />,
           }}
