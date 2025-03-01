@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 21,
+        title: "Quotes: Kafka on the Shore",
+        link: "quotes-kafka-on-the-shore",
+        file: "quotes-kafka-on-the-shore.md",
+        tags: ["books"],
+    },
+
+    {
         id: 20,
         title: "Echoes in the Crowd: On Solitude and Belonging",
         link: "echoes-in-the-crowd",
