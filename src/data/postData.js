@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 23,
+        title: "Deep Work: Notes and Takeaways, Part II",
+        link: "deep-work-notes-and-takeaways-part-II",
+        file: "deep-work-notes-and-takeaways-part-II.md",
+        tags: ["books", "experiences"],
+    },
+
+    {
         id: 22,
         title: "Deep Work: Notes and Takeaways, Part I",
         link: "deep-work-notes-and-takeaways-part-I",
