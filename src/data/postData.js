@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 25,
+        title: "Quotes: Norwegian Wood",
+        link: "quotes-norwegian-wood",
+        file: "quotes-norwegian-wood.md",
+        tags: ["books"],
+    },
+
+    {
         id: 24,
         title: "Deep Work: Notes and Takeaways, Part III",
         link: "deep-work-notes-and-takeaways-part-III",
