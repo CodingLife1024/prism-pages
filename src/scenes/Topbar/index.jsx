@@ -14,7 +14,7 @@ const TopBar = () => {
       <a href="https://www.linkedin.com/in/riddhidipta-pal/" target="_blank" rel="noopener noreferrer">
         <FaLinkedin style={style} />
       </a>
-      <a href="https://www.instagram.com/coding_1024_/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/articulate_matter/" target="_blank" rel="noopener noreferrer">
         <FaInstagram style={style} />
       </a>
     </div>
