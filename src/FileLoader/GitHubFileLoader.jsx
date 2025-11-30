@@ -1,90 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import rehypeRaw from 'rehype-raw';
-import emoji from 'remark-emoji';
-import 'katex/dist/katex.min.css';
-import styles from './../PageLoader/pageloader.module.css';
 
 const GitHubFileLoader = ({ githubLink }) => {
-  const [fileContent, setFileContent] = useState(() => {
-    const storedContent = localStorage.getItem('githubFileContent');
-    return storedContent ? atob(storedContent) : '';
-  });
+  const [fileContent, setFileContent] = useState('');
+  const markdownRef = useRef(null);
 
+  // Load MathJax with inline math config
   useEffect(() => {
-    const fetchFileContent = async () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$']],
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+
+      const script = document.createElement('script');
+      script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js";
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  }, []);
+
+  // Fetch GitHub content
+  useEffect(() => {
+    const stored = localStorage.getItem('githubFileContent');
+    if (stored) {
+      setFileContent(atob(stored));
+    }
+
+    const fetchContent = async () => {
       try {
         const response = await axios.get(githubLink);
         const data = response.data;
 
         if (data.content) {
-          const content = atob(data.content);
+          const decoded = atob(data.content);
           localStorage.setItem('githubFileContent', data.content);
-          setFileContent(content);
+          setFileContent(decoded);
         } else {
-          console.error('No content found in the response:', data);
+          console.error("No content found:", data);
         }
-      } catch (error) {
-        console.error('Error fetching GitHub content:', error);
+      } catch (err) {
+        console.error("Error fetching GitHub content:", err);
       }
     };
 
-    fetchFileContent();
+    fetchContent();
 
-    return () => {
-      localStorage.removeItem('githubFileContent');
-    };
+    return () => localStorage.removeItem('githubFileContent');
   }, [githubLink]);
 
-  const renderProgress = ({ node, ...props }) => {
-    if (node.children[0]?.type === 'element' && node.children[0]?.tagName === 'progress') {
-      return <div {...props} />;
+  // Typeset math when content updates
+  useEffect(() => {
+    if (window.MathJax && markdownRef.current) {
+      window.MathJax.typesetPromise([markdownRef.current]);
     }
-    return <p {...props} />;
-  };
+  }, [fileContent]);
 
   return (
     <div style={{ maxWidth: '100%', padding: '30px', overflowY: 'auto' }}>
       {fileContent ? (
-        <ReactMarkdown
-          className={styles.markdown}
-          remarkPlugins={[remarkGfm, remarkMath, emoji]}
-          rehypePlugins={[rehypeKatex, rehypeRaw]}
-          components={{
-            img: ({ node, ...props }) => <img {...props} style={{ maxWidth: '100%', height: 'auto' }} alt="" />,
-            table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1rem' }} />,
-            th: ({ node, children, ...props }) => {
-              const index = node.position?.start.column - 1;
-              const style = {
-                width: ['5%', '30%', '15%', '20%', '20%'][index] || '20%', // Set the width of the column
-                border: '1px solid #ddd',
-                padding: '8px',
-                textAlign: 'center', // Center align the header text
-                verticalAlign: 'middle', // Vertically center the content
-              };
-              return <th {...props} style={style}>{children}</th>;
-            },
-            td: ({ node, children, ...props }) => {
-              const index = node.position?.start.column - 1;
-              const style = {
-                width: ['5%', '30%', '15%', '20%', '20%'][index] || '20%', // Set the width of the column
-                border: '1px solid #ddd',
-                padding: '8px',
-                textAlign: 'center', // Center align the header text
-                verticalAlign: 'middle', // Vertically center the content
-              };
-              return <td {...props} style={style}>{children}</td>;
-            },
-            p: renderProgress,
-            progress: ({ node, ...props }) => <progress {...props} style={{ width: '100%' }} />,
-          }}
-        >
-          {fileContent}
-        </ReactMarkdown>
+        <div ref={markdownRef}>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {fileContent}
+          </ReactMarkdown>
+        </div>
       ) : (
         <p>Loading content...</p>
       )}
