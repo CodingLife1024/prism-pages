@@ -67,7 +67,9 @@ const GitHubFileLoader = ({ githubLink }) => {
     <div style={{ maxWidth: '100%', padding: '30px', overflowY: 'auto' }}>
       {fileContent ? (
         <div ref={markdownRef}>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            className="markdown">
             {fileContent}
           </ReactMarkdown>
         </div>

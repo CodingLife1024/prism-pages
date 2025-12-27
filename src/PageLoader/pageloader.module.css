@@ -85,6 +85,46 @@ th {
     text-decoration: underline;
 }
 
+/* Markdown Progress Bars */
+
+.markdown progress {
+    width: 100%;
+    height: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #013437;
+    overflow: hidden;
+    margin: 6px 0;
+}
+
+/* Chrome / Edge / Safari */
+.markdown progress::-webkit-progress-bar {
+    background-color: #013437;
+    border-radius: 10px;
+}
+
+.markdown progress::-webkit-progress-value {
+    background: linear-gradient(
+        90deg,
+        #1FBFAF,
+        #6be3da
+    );
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Firefox */
+.markdown progress::-moz-progress-bar {
+    background: linear-gradient(
+        90deg,
+        #1FBFAF,
+        #6be3da
+    );
+    border-radius: 10px;
+}
+
 @media only screen and (max-width: 1000px) {
     .mainContent {
         font-size: 15px;
