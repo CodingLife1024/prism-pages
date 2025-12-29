@@ -69,7 +69,36 @@ const GitHubFileLoader = ({ githubLink }) => {
         <div ref={markdownRef}>
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            className="markdown">
+            className={styles.markdown}
+            components={{
+            img: ({ node, ...props }) => <img {...props} style={{ maxWidth: '100%', height: 'auto' }} alt="" />,
+            table: ({ node, ...props }) => <table {...props} style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1rem' }} />,
+            th: ({ node, children, ...props }) => {
+              const index = node.position?.start.column - 1;
+              const style = {
+                width: ['5%', '30%', '15%', '20%', '20%'][index] || '20%', // Set the width of the column
+                border: '1px solid #ddd',
+                padding: '8px',
+                textAlign: 'center', // Center align the header text
+                verticalAlign: 'middle', // Vertically center the content
+              };
+              return <th {...props} style={style}>{children}</th>;
+            },
+            td: ({ node, children, ...props }) => {
+              const index = node.position?.start.column - 1;
+              const style = {
+                width: ['5%', '30%', '15%', '20%', '20%'][index] || '20%', // Set the width of the column
+                border: '1px solid #ddd',
+                padding: '8px',
+                textAlign: 'center', // Center align the header text
+                verticalAlign: 'middle', // Vertically center the content
+              };
+              return <td {...props} style={style}>{children}</td>;
+            },
+            p: renderProgress,
+            progress: ({ node, ...props }) => <progress {...props} style={{ width: '100%' }} />,
+          }}
+        >
             {fileContent}
           </ReactMarkdown>
         </div>
