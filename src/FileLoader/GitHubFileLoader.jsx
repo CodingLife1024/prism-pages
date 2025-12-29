@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import styles from './../PageLoader/pageloader.module.css';
 
 const GitHubFileLoader = ({ githubLink }) => {
   const [fileContent, setFileContent] = useState('');
@@ -95,7 +96,6 @@ const GitHubFileLoader = ({ githubLink }) => {
               };
               return <td {...props} style={style}>{children}</td>;
             },
-            p: renderProgress,
             progress: ({ node, ...props }) => <progress {...props} style={{ width: '100%' }} />,
           }}
         >
