@@ -57,6 +57,14 @@ const GitHubFileLoader = ({ githubLink }) => {
     return () => localStorage.removeItem('githubFileContent');
   }, [githubLink]);
 
+  const renderProgress = ({ node, ...props }) => {
+    if (node.children[0]?.type === 'element' && node.children[0]?.tagName === 'progress') {
+      return <div {...props} />;
+
+    }
+    return <p {...props} />;
+  };
+
   // Typeset math when content updates
   useEffect(() => {
     if (window.MathJax && markdownRef.current) {
@@ -96,6 +104,7 @@ const GitHubFileLoader = ({ githubLink }) => {
               };
               return <td {...props} style={style}>{children}</td>;
             },
+            p: renderProgress,
             progress: ({ node, ...props }) => <progress {...props} style={{ width: '100%' }} />,
           }}
         >
