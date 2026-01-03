@@ -1,6 +1,14 @@
 export const postData = [
 
     {
+        id: 28,
+        title: "Quotes: Dance Dance Dance",
+        link: "quotes-dance-dance-dance",
+        file: "quotes-dance-dance-dance.md",
+        tags: ["books"],
+    },
+
+    {
         id: 27,
         title: "HyperLogLog Algorithm: Explanation and Implementation",
         link: "hyperloglog",
